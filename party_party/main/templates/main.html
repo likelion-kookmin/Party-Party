@@ -16,7 +16,17 @@
         <div class = "section_title">현재 진행 중인 수요조사폼</div>
         <div></div>
         <div class = "section_title">현재 진행 중인 입금폼</div>
-        <div></div>
+        <div>
+            {% for post in posts %}
+            <article>
+                {{post.product}}
+                {{post.price}}
+                {{post.writer}}
+            </article>
+            {% endfor %}
+
+
+        </div>
     </section>
 
     <a href="{% url 'write_choices' %}" class="btn btn-primary buttoncol">

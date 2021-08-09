@@ -5,3 +5,7 @@ main {
     padding-top : 60px;
     background-color: antiquewhite;
 }
+
+main article {
+    background-color : pink;
+}
