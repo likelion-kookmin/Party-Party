@@ -1,4 +1,10 @@
 from django.contrib import admin
-from .models import *
-# Register your models here.
-admin.site.register(Goods)
+from .models import SemiGoods,Goods,User
+
+
+
+
+class BoardAdmin(admin.ModelAdmin):
+    list_display = ('product', 'product_image','writer', )
+
+admin.site.register(SemiGoods, BoardAdmin)

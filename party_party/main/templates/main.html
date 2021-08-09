@@ -1,38 +1,32 @@
 {% extends 'base.html' %}
 {% block container %}
 {% load static %}
+
 <head>
     <title>Party Party</title>
-    <link rel = "Stylesheet" href = "{% static 'main.css' %}">
+    <link rel="Stylesheet" href="{% static 'main.css' %}">
 
 </head>
 <main>
     <section>~배너~</section>
     <section>
-        <div class = "section_title">마감임박! 오늘 마감 입금폼</div>
+        <div class="section_title">마감임박! 오늘 마감 입금폼</div>
         <div></div>
-        <div class = "section_title">마감임박! 오늘 마감 수요조사폼</div>
+        <div class="section_title">마감임박! 오늘 마감 수요조사폼</div>
         <div></div>
-        <div class = "section_title">현재 진행 중인 수요조사폼</div>
+        <div class="section_title">현재 진행 중인 수요조사폼</div>
         <div></div>
-        <div class = "section_title">현재 진행 중인 입금폼</div>
-        <div>
-            {% for post in posts %}
-            <article>
-                {{post.product}}
-                {{post.price}}
-                {{post.writer}}
-            </article>
-            {% endfor %}
-
-
-        </div>
+        <div class="section_title">현재 진행 중인 입금폼</div>
+        <div></div>
     </section>
 
+    <a href="{% url 'mypage' %}" class="btn btn-primary buttoncol">
+        <span style='color:black'>
+            Press mypage</span></a>
     <a href="{% url 'write_choices' %}" class="btn btn-primary buttoncol">
-    <span style='color:white'>
-        Press button</span>
-    
+        <span style='color:black'>
+            Press button</span></a>
+
 </main>
 
 
