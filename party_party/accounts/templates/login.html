@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+<link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+<link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+<style>
+    p.hi {
+        font-family: 'Hi Melody', cursive;
+        font-size: 23px;
+    }
+
+    p.kopub{
+        font-family: 'KoPub Dotum'; 
+        font-size: 2em; 
+    }
+
+    p.nbg {
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        font-size: 23px;
+    }
+
+    p.ng {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 23px;
+    }
+
+    body {
+        display: flex;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+    }
+
+    .box {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        
+        width: 35vw;
+        min-width: 500px;
+        height: auto;
+        margin: 10px auto;
+
+        border: 1px solid #707070;
+        border-radius: 3px;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+        width: 25vw;
+        height: auto;
+        margin: 10px 0 30px 0;
+    }
+
+    .logo {
+        font-family: 'Hi Melody', cursive;
+        font-size: 3.5vw;
+
+        margin: 30px;
+    }
+
+    input {
+        width: 20vw;
+        height: 3vw;
+        margin: 10px;
+
+        border: 1px solid #707070;
+        border-radius: 3px;
+
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        font-size: 1em; 
+    }
+
+    .id, .password {
+        font-family: 'Nanum Gothic', sans-serif;
+        font-size: 15px;
+    }
+
+    button {
+        width: 20vw;
+        height: 3vw;
+        margin: 10px;
+
+        border: none;
+        border-radius: 3px;
+
+        font-family: 'KoPub Dotum'; 
+        font-size: 1em; 
+        color: #4d4c4c;
+
+        cursor: pointer;
+    }
+
+    .loginBtn {
+        background-color: #81F7BE;
+    }
+    .loginBtn:hover {
+        background-color: #69e7aa;
+    }
+
+    .signInBtn {
+        background-color: #0BE4E4;
+    }
+    .signInBtn:hover {
+        background-color: #0bd3d3;
+    }
+
+    .line-box {
+        display: flex;
+        align-items: center;
+
+        font-family: 'Nanum Barun Gothic', sans-serif;
+        font-size: 13px; 
+    }
+
+    .line {
+        height: 0.5px;
+        width: 9vw;
+        background-color: #707070;
+    }
+</style>
+
+<body>
+    {% extends 'base.html' %}
+
+    {% block container %}
+
+    <div class="box">
+        <div class="container">
+            <div class="logo">
+                <b>partyparty</b>
+            </div>
+
+            <input class="id" placeholder="아이디">
+            <input type="password" class="password" placeholder="비밀번호">
+
+            <button type="submit" class="loginBtn">
+                <b>로그인</b>
+            </button>
+
+            <div class="line-box">
+                <div class="line"></div>
+                &nbsp;또는&nbsp;
+                <div class="line"></div>
+            </div>
+
+            <a href="{% url 'signup' %}" type="submit" class="signupBtn">
+                <b>회원가입</b>
+            </button>
+        </div>
+    </div>
+    
+    {% endblock %}
+</body>
+
+</html>

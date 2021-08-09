@@ -1,0 +1,52 @@
+{% extends 'base.html' %}
+{% block container %}
+{% load static %}
+<!--<!DOCTYPE html>
+<html lang = "ko">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel = "Stylesheet" href = "./static/goods_detail.css">
+    </head>
+    <body>-->
+    <head>
+        <title>Goods Detail</title>
+        
+        <link rel = "Stylesheet" href = "{% static 'goods_detail.css' %}">
+        
+    </head>
+        
+
+        <main>
+            <section class = "about_goods">
+                <div class = "profile">
+                    <img src = "https://static.coupangcdn.com/image/vendor_inventory/d90c/b349f1d2de9182d9bf0a544a14df7799cc795e4850a7338d3d06dfdc3a44.jpg">
+                    <div class = "section_info">
+                        <div class = "product_name">제품명</div>
+                        <div class = "writer">작성자</div>
+                        <div class = "like">♡</div>
+                        <div class = "alarm">알람기능</div>
+                    </div>
+                </div>
+                
+            </section>
+            
+            
+            <div class = "section_title">
+                <div class = "needs">수요조사폼</div>
+                <div class = "deposit">입금폼</div>
+                <div class = "notice">공지사항</div>
+            </div>
+            <div class = "section_content">
+                1. 제품 선택<br>
+                2. 코멘트
+            </div>
+        
+            
+
+        </main>
+    <!--</body>-->
+
+{% endblock %}

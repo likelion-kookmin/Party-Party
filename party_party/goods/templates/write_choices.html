@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+{% block container %}
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Hi+Melody&display=swap" rel="stylesheet">
+    <link href='http://www.openhiun.com/hangul/nanumbarungothic.css' rel='stylesheet' type='text/css'>
+    <link rel='stylesheet' href='//cdn.jsdelivr.net/npm/font-kopub@1.0/kopubdotum.min.css'>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600&display=swap" rel="stylesheet">
+    <link rel="Stylesheet" href="./static/write_choices.css">
+    
+    
+    
+    <title>write-choices</title>
+    
+
+
+    
+</head>
+
+<body>
+
+    
+    <h2 class='kopub'>글 작성하기</h2>
+
+    <a class="btn green" href="{% url 'write_semigoods' %}">수요조사폼 작성하기</a>
+    <a class="btn green" href="{% url 'write_goods' %}">입금폼 작성하기</a>
+                
+
+</body>
+
+</html>
+
+{% endblock %}
+

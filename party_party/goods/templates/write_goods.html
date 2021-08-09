@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block container %}
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="Stylesheet" href="./static/write_goods.css">
+    <title>write-choices</title>
+
+
+    <script>
+        function chk() {
+            if (document.getElementById("title").value == "" || document.getElementById("body").value == "") {
+                alert("내용을 입력해주세요");
+                return false;
+            }
+            else
+                document.search.submit();
+        }
+    </script>
+</head>
+
+<body>
+
+    <h2>입금폼 작성하기</h2>
+    <div>
+        <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
+            {% csrf_token %}
+            <input type="text" name="title">
+            <input type="text" name="content">
+            <input type="file" name="imgs" multiple>
+            <input type="submit" value="작성하기">
+        </form>
+
+    </div>
+
+</body>
+
+</html>
+
+{% endblock %}

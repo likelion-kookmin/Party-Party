@@ -1,0 +1,62 @@
+main{
+    background-color: orange;
+    width : 75vw;
+    height : 100vh;
+    margin : 0 auto;
+    padding-top : 60px;
+}
+
+main .about_goods {
+    background-color: rgb(255, 255, 230);
+}
+
+main section .profile img{
+    width : 200px;
+    height : 200px;
+}
+
+main section .section_info{
+    display : inline-block;
+    background-color: blueviolet;
+}
+
+main section .section_title {
+    border-top: 2px solid black;
+    border-right: 2px solid black;
+    border-left: 2px solid black;
+    display : inline-block;
+}
+
+main .section_title{
+    display : grid;
+    height : 50px;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "needs deposit notice";
+    text-align: center;
+    border-top : 2px solid black;
+    border-right : 2px solid black;
+    border-left : 2px solid black;
+}
+
+main .section_title div{
+    padding : 10px;
+}
+
+main .section_title .needs{
+    grid-area: needs;
+    background-color: aqua;
+}
+
+main .section_title .deposit{
+    grid-area: deposit;
+    background-color: white;
+}
+
+main .section_title .notice {
+    grid-area: notice;
+    background-color: aqua;
+}
+
+main section .section_content{
+    background-color: rgb(212, 255, 255);
+}
