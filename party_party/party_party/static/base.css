@@ -1,7 +1,5 @@
 html {
   position: relative;
-  min-height: 100%;
-  margin: 0;
 }
 
 body {
@@ -10,9 +8,8 @@ body {
   text-align: center;
   align-items: center;
 
-  min-height: 100%;
-
   margin-top: 100px;
+  margin-bottom: 300px;
 }
 
 header {
