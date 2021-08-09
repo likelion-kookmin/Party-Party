@@ -16,29 +16,31 @@
 
     <body>
         <header>
-            <nav>
-                <div class = "logo">partyparty</div>
-        
-                <input type = "text" name = "search" placeholder = "search">
+            
+            <a href="{% url 'main' %}" class = "logo"><b>partyparty</b></a>
+            
+            <div class="search-bar">
+                <input type = "text" class="search" name = "search" placeholder = "search">
                 <img src = "{% static 'search.png' %}" class = "icon_img">
-                
-                
-                {% if not user.is_authenticated %}
-                <a href="{% url 'login' %}">
-                    <img src = "{% static 'profile_standard.png' %}" class = "profile">
-                    <div class = "login">로그인/회원가입</div>
-                </a>
-                {% endif %}
+            </div>
+            
+            
+            {% if not user.is_authenticated %}
+            <a href="{% url 'login' %}" class="loginButton">
+                <img src = "{% static 'profile_standard.png' %}" class = "profile">
+                <div class = "login">로그인/회원가입</div>
+            </a>
+            {% endif %}
 
 
-                {% if user.is_authenticated %}
-                <a href="{% url 'main' %}" img src = "{% static 'account_standard.png' %}" class = "myaccount">
-                </a>
-                
-                {% endif %}
-                
-                <img src = "{% static 'menu.png' %}" class = "menu">
-            </nav>
+            {% if user.is_authenticated %}
+            <a href="{% url 'main' %}" img src = "{% static 'account_standard.png' %}" class = "myaccount">
+            </a>
+            
+            {% endif %}
+            
+            <!-- <img src = "{% static 'menu.png' %}" class = "menu"> -->
+        
         </header>
 
         

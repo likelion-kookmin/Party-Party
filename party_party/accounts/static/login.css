@@ -1,0 +1,92 @@
+.box {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+  width: 30vw;
+  min-width: 500px;
+  height: auto;
+  margin: 10px auto;
+
+  border: 1px solid #707070;
+  border-radius: 3px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  width: 25vw;
+  height: auto;
+  margin: 10px 0 30px 0;
+}
+
+.logo {
+  font-family: "Hi Melody", cursive;
+  font-size: 3.5vw;
+
+  margin: 30px;
+}
+
+input {
+  width: 20vw;
+  height: 3vw;
+  margin: 10px;
+
+  border: 1px solid #707070;
+  border-radius: 3px;
+
+  font-family: "Nanum Barun Gothic", sans-serif;
+  font-size: 1em;
+}
+
+.id,
+.password {
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 15px;
+}
+
+button {
+  width: 20vw;
+  height: 3vw;
+  margin: 10px;
+
+  border: none;
+  border-radius: 3px;
+
+  font-family: "KoPub Dotum";
+  font-size: 1em;
+  color: #4d4c4c;
+
+  cursor: pointer;
+}
+
+.loginBtn {
+  background-color: #81f7be;
+}
+.loginBtn:hover {
+  background-color: #69e7aa;
+}
+
+.signupBtn {
+  background-color: #0be4e4;
+}
+.signupBtn:hover {
+  background-color: #0bd3d3;
+}
+
+.line-box {
+  display: flex;
+  align-items: center;
+
+  font-family: "Nanum Barun Gothic", sans-serif;
+  font-size: 13px;
+}
+
+.line {
+  height: 0.5px;
+  width: 9vw;
+  background-color: #707070;
+}
