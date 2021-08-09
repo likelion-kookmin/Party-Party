@@ -1,29 +1,49 @@
 {% extends 'base.html' %}
 {% block container %}
 {% load static %}
-<!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="Stylesheet" href="./static/write_semigoods.css">
-    <title>write-choices</title>
+    <link rel="stylesheet" href="{% static 'write_semigoods.cs' %}">
 </head>
 
-<body>
+<script>
+    function chk() {
+        if (document.getElementById("title").value == "" || document.getElementById("body").value == "") {
+            alert("내용을 입력해주세요");
+            return false;
+        }
+        else
+            document.search.submit();
+    }
+</script>
 
-    <h2>수요조사폼 작성하기</h2>
-    <div>
-        수요조사폼 작성하기
+<main>
+    <br><br>
+    <section><h2>수요조사폼 작성하기</h2></section>
+    <hr>
+    <section>
+    <form class="suggest" action="{% url 'create_semi' %}" method="POST" enctype=multipart/form-data>
+        {%csrf_token%}
+        <p>폼 이름<br> <input type="text" name="product" required></p>
+        <p>도안<br> <input id="inputbox" type="file" name="product_imgs" required></p>
+        <p>예상 가격<br><input id="shortbox" type="number" name="semi_price" required>원</p>
+        <p>예상 수량<br><input id="shortbox" type="number" name="semi_count" required>개</p>
+        <p>태그 <select name="tag" id="tag">
+            <option value="2D">2D</option>
+            <option value="실존인물">실존인물</option>
+            <option value="애니메이션">애니메이션</option></select></p>
+        <p>email<br><input id="text" type="email" name="email" required>개</p></p>
+        <p>트위터 아이디<br> <input type="text" name="twitter" required></p>
+        
+        <p>설명<br> <input id="longbox" type="text" name="information" required></p>
+        <button type="submit">submit</button>
+    </form>
+    </section>
 
-        <br>입금폼 작성하기
+</main>
 
-    </div>
 
-</body>
 
 </html>
-
 {% endblock %}

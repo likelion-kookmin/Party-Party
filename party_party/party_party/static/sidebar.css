@@ -1,0 +1,204 @@
+main {
+    top: 0;
+  padding: 0;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+section {
+    font-family: 'KoPub Dotum'; 
+    font-size: 80px; 
+    color: black;
+}
+
+section div{
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 23px;
+    color: black;
+}
+
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+
+
+
+.sidebar {
+
+  height: auto;
+  width: 12.2vw;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #ffffff;
+  /*  opacity: 0.5;*/
+  overflow-x: hidden;
+  color:black;
+  padding-top: 16px;
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Style the main content */
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  text-align: center;
+  align-items: center;
+
+  
+  height: 60px;
+
+  padding: 0 30px;
+
+  z-index: 1;
+  background-color: white;
+}
+
+header .logo {
+  padding: 10px 50px;
+  margin-bottom: 10px;
+  height: 30px;
+  text-decoration-line: none;
+  font-size: 30px;
+  font-family: "Hi Melody", cursive;
+}
+
+header .search-bar {
+  width: auto;
+  display: flex;
+  flex-direction: row;
+}
+
+header .search {
+  border: none;
+  border-bottom: 1px solid black;
+
+  margin: 17px 5px;
+  width: 140px;
+  height: 20px;
+
+  float: left;
+}
+
+header img.icon_img {
+  width: 20px;
+  height: 20px;
+  margin: 20px 0;
+  float: right;
+}
+
+header .loginButton {
+  width: 150px;
+  margin-left: 50%;
+  text-decoration-line: none;
+}
+
+a:link {
+  color: black;
+  text-decoration: none;
+}
+a:visited {
+  color: black;
+  text-decoration: none;
+}
+
+header img.profile {
+  border-radius: 50%;
+  margin: 20px 5px;
+  width: 20px;
+  height: 20px;
+
+  float: left;
+}
+
+header .login {
+  text-align: center;
+  font-family: "Nanum Barun Gothic", sans-serif;
+  font-size: 12px;
+  margin: 20px 0px;
+  width: 130px;
+}
+
+header .myaccount {
+  border-radius: 50%;
+  margin: 16px 3px 16px 80px;
+  width: 30px;
+  height: 30px;
+}
+
+header .menu {
+  margin: 20px 10px;
+  width: 25px;
+  height: 20px;
+}
+
+footer {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  right: 0;
+
+  display: grid;
+  grid-template-columns: 1fr 200px 300px 200px 1fr;
+  grid-template-areas: "space1 about sns contact space2";
+  padding: 50px;
+
+  text-align: center;
+  color: white;
+  background-color: rgb(54, 54, 54);
+  height: 100px;
+}
+
+footer div {
+  padding: 5px 20px;
+  text-align: left;
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 10px;
+  height: 60px;
+}
+
+footer .about {
+  grid-area: about;
+  text-align: right;
+}
+
+footer .sns {
+  grid-area: sns;
+  border-right: 1px solid white;
+  border-left: 1px solid white;
+}
+
+footer .contact {
+  grid-area: contact;
+}
