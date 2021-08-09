@@ -1,0 +1,70 @@
+main {
+    width : 75vw;
+    background-color: white;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 60px;
+    border-width: 4pt;
+    border-style: solid;
+    border-color: black;
+}
+
+section {
+    font-family: 'KoPub Dotum'; 
+    font-size: 80px; 
+    color: black;
+}
+
+section div{
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 23px;
+    color: black;
+}
+
+
+a:link { color: black; text-decoration: none;}
+a:visited { color: black; text-decoration: none;}
+a:hover { color: black; text-decoration: none;}
+
+
+
+.sidebar {
+
+  height: auto;
+  width: 12.2vw;
+  position: fixed;
+  z-index: 1;
+  top: 10;
+  left: 0;
+  background-color: #ffffff;
+  /*  opacity: 0.5;*/
+  overflow-x: hidden;
+  color:black;
+  padding-top: 16px;
+}
+
+/* Style sidebar links */
+.sidebar a {
+  padding: 6px 8px 6px 16px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #818181;
+  display: block;
+}
+
+/* Style links on mouse-over */
+.sidebar a:hover {
+  color: #f1f1f1;
+}
+
+/* Style the main content */
+
+
+/* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+@media screen and (max-height: 450px) {
+  .sidebar {padding-top: 15px;}
+  .sidebar a {font-size: 18px;}
+}
+
+
+
