@@ -7,19 +7,21 @@
 
 </head>
 <main>
-    <section>~배너~</section>
+    <section class = "banner">~배너~</section>
+    
     <section>
         <div class = "section_title">마감임박! 오늘 마감 입금폼</div>
-        <div></div>
+        <div class = "section_content"></div>
         <div class = "section_title">마감임박! 오늘 마감 수요조사폼</div>
-        <div></div>
+        <div class = "section_content"></div>
         <div class = "section_title">현재 진행 중인 수요조사폼</div>
-        <div></div>
+        <div class = "section_content"></div>
         <div class = "section_title">현재 진행 중인 입금폼</div>
-        <div>
+        <div class = "section_content">
             {% for post in posts %}
             <article>
-                <a href = "{% url 'goodslist' %}">{{post.product}}</a>
+                <img src = "{{post.product_image.url}}" class = "product_image">
+                <a href = "{% url 'goodsdetail' post.id %}">{{post.product}}</a>
                 
                 {{post.price}}
                 {{post.writer}}

@@ -8,9 +8,9 @@ def goodslist(request) :
     product = Goods.objects.all()
     return render(request, 'goods_list.html')
 
-def product(request, product_id) :
-    products = Goods.object.get(id = product_id)
-    return render(request, 'goods_detail.html', {'products' : products})
+def goodsdetail(request, product_id) :
+    product = Goods.objects.get(id = product_id)
+    return render(request, 'goods_detail.html', {'product' : product})
 
 
 def write_choices(request):
