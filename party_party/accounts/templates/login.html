@@ -15,16 +15,19 @@
 <body>
     <div class="box">
         <div class="container">
-            <div class="logo">
+            <div class="loginlogo">
                 <b>partyparty</b>
             </div>
 
-            <input class="id" placeholder="아이디">
-            <input type="password" class="password" placeholder="비밀번호">
-
-            <button type="submit" class="loginBtn">
-                <b>로그인</b>
-            </button>
+            <form action="{% url 'login' %}" method="POST">
+                {% csrf_token %}
+                <input class="id" name="username" placeholder="아이디" required>
+                <input type="password" name="password" class="password" placeholder="비밀번호" required>
+                <h6 id="error_message">{{error}}</h6><br>
+                <button type="submit" class="loginBtn">
+                    <b>로그인</b>
+                </button>
+            </form>
 
             <div class="line-box">
                 <div class="line"></div>

@@ -1,7 +1,5 @@
 html {
   position: relative;
-  min-height: 100%;
-  margin: 0;
 }
 
 body {
@@ -14,6 +12,7 @@ body {
   min-height: 100vh;
 
   margin-top: 100px;
+  margin-bottom: 300px;
 }
 
 header {
@@ -25,13 +24,13 @@ header {
   top: 0;
   left: 0;
   right: 0;
-
   height: 60px;
-
   padding: 0 30px;
 
   z-index: 1;
+
   background-color: white;
+  box-shadow: 0 2px 4px rgb(0, 0, 0, 0.16);
 }
 
 header .logo {
@@ -115,14 +114,10 @@ header .menu {
 .wrapper {
   min-height: 100%;
   position: relative;
-  padding-bottom:100px;
+  padding-bottom: 100px;
   /*margin: 0 auto -100px;*/
 }
- /* 하단 마진은 푸터의 높이 값과 같다 */
-
-
-
-
+/* 하단 마진은 푸터의 높이 값과 같다 */
 
 footer {
   position: absolute;
@@ -139,7 +134,7 @@ footer {
   color: white;
   background-color: rgb(54, 54, 54);
   height: 100px;
-  margin-top:auto;
+  margin-top: auto;
 }
 
 footer div {
