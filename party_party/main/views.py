@@ -9,3 +9,4 @@ User = get_user_model()
 def main(request) :
     posts = Goods.objects.all()
     return render(request, 'main.html', {'posts' : posts})
+    

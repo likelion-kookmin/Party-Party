@@ -20,7 +20,7 @@
             {% for post in posts %}
             <article>
                 <img src = "{{post.product_image.url}}" class = "product_image">
-                <a href = "{% url 'goodslist' %}">{{post.product}}</a>
+                <a href = "{% url 'goodsdetail' post.id %}">{{post.product}}</a>
                 
                 {{post.price}}
                 {{post.writer}}
