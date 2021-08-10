@@ -1,9 +1,13 @@
-from django.shortcuts import render
-from .models import Goods
+from django.shortcuts import render, redirect
+from .models import *
 
-def goods_detail(request) :
-    #goods = Goods.object.all()
-    return render(request, 'goods_detail.html')
+def goodslist(request) :
+    product = Goods.objects.all()
+    return render(request, 'goods_list.html')
+
+def product(request, product_id) :
+    products = Goods.object.get(id = product_id)
+    return render(request, 'goods_detail.html', {'products' : products})
 
 
 def write_choices(request):
@@ -38,7 +42,7 @@ def goods(request): #입금폼 작성
     goods = Goods.object.all()
     return render(request, 'write_goods.html')
 
-
+'''
 def create_semi(request):
     if(request.method == 'POST'):
         new_idea.product = request.POST['title']
@@ -58,3 +62,4 @@ def create_semi(request):
             new_idea.save()
 
     return redirect('detail', new_idea.id)
+'''

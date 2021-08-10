@@ -19,7 +19,8 @@
         <div>
             {% for post in posts %}
             <article>
-                {{post.product}}
+                <a href = "{% url 'goodslist' %}">{{post.product}}</a>
+                
                 {{post.price}}
                 {{post.writer}}
             </article>

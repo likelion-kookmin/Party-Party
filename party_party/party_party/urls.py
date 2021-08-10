@@ -1,6 +1,5 @@
 from django.contrib import admin
-from django.urls import path
-from accounts import views
+# from accounts import views
 from main import views
 from django.urls import path, include
 
