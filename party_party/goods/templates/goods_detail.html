@@ -20,12 +20,13 @@
         
 
         <main>
+            
             <section class = "about_goods">
                 <div class = "profile">
-                    <img src = "https://static.coupangcdn.com/image/vendor_inventory/d90c/b349f1d2de9182d9bf0a544a14df7799cc795e4850a7338d3d06dfdc3a44.jpg">
+                    <img src = "{{product.product_image.url}}" class = "product_img">
                     <div class = "section_info">
-                        <div class = "product_name">제품명</div>
-                        <div class = "writer">작성자</div>
+                        <div class = "product_name">제품명 : {{product.product}}}</div>
+                        <div class = "writer">작성자 : {{product.writer}}</div>
                         <div class = "like">♡</div>
                         <div class = "alarm">알람기능</div>
                     </div>
