@@ -2,10 +2,37 @@ main {
     width : 75vw;
     height : 100vh;
     margin : 0 auto;
-    padding-top : 60px;
-    background-color: antiquewhite;
+    /*background-color: antiquewhite;*/
+}
+
+main section{
+    margin : 10px;
+}
+
+main .banner{
+    height : 200px;
+    background-color: orange;
 }
 
 main article {
     background-color : pink;
+    display : inline-block;
+    margin : 10px;
+    width : 250px;
+    height : 250px;
+}
+
+main section .section_title {
+    text-align: left;
+}
+
+main section .section_content{
+    background-color: white;
+    border: 1px solid black;
+    height : 250px;
+}
+
+article img {
+    width : 200px;
+    height : 200px;
 }
