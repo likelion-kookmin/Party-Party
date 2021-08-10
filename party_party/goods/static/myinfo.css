@@ -1,0 +1,24 @@
+img {
+  border-radius: 50%;
+}
+
+
+main {
+    width : 75vw;
+    background-color: white;
+    height: 100vh;
+    margin: 0 auto;
+    padding-top: 60px;
+}
+
+section {
+    font-family: 'KoPub Dotum'; 
+    font-size: 80px; 
+    color: black;
+}
+
+section div{
+    font-family: 'Nanum Barun Gothic', sans-serif;
+    font-size: 23px;
+    color: black;
+}
