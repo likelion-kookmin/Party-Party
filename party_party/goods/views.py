@@ -1,12 +1,16 @@
-
 from django.shortcuts import render, get_object_or_404, redirect
 from django.utils import timezone
 from .models import Goods, SemiGoods,Like,semiLike
 
 
-def goods_detail(request) :
-    #goods = Goods.object.all()
-    return render(request, 'goods_detail.html')
+
+def goodslist(request) :
+    product = Goods.objects.all()
+    return render(request, 'goods_list.html')
+
+def product(request, product_id) :
+    products = Goods.object.get(id = product_id)
+    return render(request, 'goods_detail.html', {'products' : products})
 
 
 def write_choices(request):
@@ -61,25 +65,7 @@ def goods(request): #입금폼 작성
     goods = Goods.object.all()
     return render(request, 'write_goods.html')
 
-def create(request):
-    if(request.method == 'POST'):
-        new_idea.product = request.POST['title']
-        new_idea.writer = request.user
-        new_idea.pud_date = timezone.now()
 
-        new_idea.email=request.POST['email']
-        new_idea.twitter=request.POST['twitter']
-        new_idea.item = request.POST['item']
-
-        if not request.FILES:
-            new_idea.image = ""
-            new_idea.save()
-
-        else:
-            new_idea.image = request.FILES['image']
-            new_idea.save()
-
-    return redirect('detail', new_idea.id)
 
 
 def mypage(request):
