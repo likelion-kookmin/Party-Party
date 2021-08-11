@@ -1,23 +1,24 @@
 {% extends 'base.html' %}
 {% block container %}
 {% load static %}
+
 <head>
     <title>Party Party</title>
-    <link rel = "Stylesheet" href = "{% static 'main.css' %}">
+    <link rel="Stylesheet" href="{% static 'main.css' %}">
 
 </head>
 <main>
-    <section class = "banner">굿즈 제작 폼 사이트 Party Party 입니다 </section>
-    
+    <section class="banner">굿즈 제작 폼 사이트 Party Party 입니다 </section>
+
     <section>
-        <div class = "section_title">마감임박! 오늘 마감 입금폼</div>
-        <div class = "section_content">
+        <div class="section_title">마감임박! 오늘 마감 입금폼</div>
+        <div class="section_content">
             {% if enddeposits %}
 
             {% for enddepos in enddeposits %}
             <article>
-                <img src = "{{enddepos.product_image.url}}" class = "product_image">
-                <a href = "{% url 'goodsdetail' enddepos.id %}">{{enddepos.product}}</a>
+                <img src="{{enddepos.product_image.url}}" class="image">
+                <a href="{% url 'goodsdetail' enddepos.id %}">{{enddepos.product}}</a>
                 {{enddepos.price}}
                 {{enddepos.writer}}
             </article>
@@ -27,25 +28,25 @@
             내역이 존재하지 않습니다.
             {% endif %}
         </div>
-        <div class = "section_title">마감임박! 오늘 마감 수요조사폼</div>
-        <div class = "section_content">
+        <div class="section_title">마감임박! 오늘 마감 수요조사폼</div>
+        <div class="section_content">
             {% for endneed in endneeds %}
             <article>
-                <img src = "{{endneed.product_image.url}}" class = "product_image">
-                <a href = "{% url 'Semigoodsdetail' endneed.id %}">{{endneed.product}}</a>
-                
+                <img src="{{endneed.product_image.url}}" class="image">
+                <a href="{% url 'goodsdetail' endneed.id %}">{{endneed.product}}</a>
+
             </article>
             {% endfor %}
         </div>
-        <div class = "section_title">현재 진행 중인 수요조사폼</div>
-        <div class = "section_content"></div>
-        <div class = "section_title">현재 진행 중인 입금폼</div>
-        <div class = "section_content">
+        <div class="section_title">현재 진행 중인 수요조사폼</div>
+        <div class="section_content"></div>
+        <div class="section_title">현재 진행 중인 입금폼</div>
+        <div class="section_content">
             {% for post in posts %}
             <article>
-                <img src = "{{post.product_image.url}}" class = "product_image">
-                <a href = "{% url 'goodsdetail' post.id %}">{{post.product}}</a>
-                
+                <img src="{{post.product_image.url}}" class="product_image">
+                <a href="{% url 'goodsdetail' post.id %}">{{post.product}}</a>
+
             </article>
             {% endfor %}
 
@@ -58,8 +59,8 @@
             Press mypage</span></a>
     <a href="{% url 'write_choices' %}" class="btn btn-primary buttoncol">
         <span style='color:black'>
-            Press button</span></a>.  
-    
+            Press button</span></a>.
+
 </main>
 
 
