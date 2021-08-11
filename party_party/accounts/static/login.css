@@ -4,7 +4,7 @@
   text-align: center;
   align-items: center;
 
-  width: 30vw;
+  width: 33vw;
   height: auto;
   margin: 10px auto;
 
@@ -23,8 +23,10 @@
 }
 
 .loginlogo {
-  font-family: "Hi Melody", cursive;
-  font-size: 3.5vw;
+  /* font-family: "Hi Melody", cursive; */
+  font-family: "Nanum Gothic", sans-serif;
+  font-size: 2.5vw;
+  color: #4d4c4c;
 
   margin: 60px;
 }

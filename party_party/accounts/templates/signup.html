@@ -11,32 +11,56 @@
 </head>
 
 
-<style>
-    p.hi {
-        font-family: 'Hi Melody', cursive;
-        font-size: 23px;
-    }
-
-    p.kopub{
-        font-family: 'KoPub Dotum'; 
-        font-size: 2em; 
-    }
-
-    p.nbg {
-        font-family: 'Nanum Barun Gothic', sans-serif;
-        font-size: 23px;
-    }
-
-    p.ng {
-        font-family: 'Nanum Gothic', sans-serif;
-        font-size: 23px;
-    }
-
-</style>
-
 <body>
-    <div>
-        <p class="kopub">ko pub 돋움체 입니다. 로그인 <br> 회원가입</p>
+    <div class="signuplogo">
+        <b>partyparty</b>
+    </div>
+    <div class="box">
+        <div class="container">
+            <form action="{% url 'signup' %}" class="signup_box" method="POST"  enctype="multipart/form-data">
+                {%csrf_token%}
+                
+                <div class="text"><br><br>아이디<br></div> 
+                <input type="text" name="username" class="id" required><br> 
+        
+                <div class="text"><br>비밀번호<br></div>
+                <input type="password" name="password1" class="password1" minlength="8" 
+                pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[$@$!%*#?&])[A-Za-z\d$@$!%*#?&]{8,16}$" required><br> 
+
+                <div class="text2">
+                    *비밀번호는 아이디와 유사하면 안됨<br>
+                    *최소 8자리, 최대 16자리<br>
+                    *숫자로만 적으면 안됨<br>
+                    *특수 문자 1개 이상 포함 <br>
+                </div>
+            
+                <div class="text"><br>비밀번호 확인<br></div>
+                <input type="password" name="password2" class="password2" required> <br>
+                <br>
+                
+                <div class="text">이름<br></div> 
+                <input type="text" name="name" class="name" required><br><br> 
+
+                <div class="text">닉네임<br></div> 
+                <input type="text" name="nickname" class="nickname" required><br><br> 
+
+                <div class="text">이메일<br></div> 
+                <input type="text" name="email" class="email" required><br><br> 
+
+                <div class="text">트위터<br></div> 
+                <input type="text" name="twitter" class="twitter" required><br><br> 
+            </p>
+            
+                <div class="text">핸드폰 번호<br></div> 
+                <input type="tel" name="phone_num" class="phone_num" required> <br><br> 
+
+                <div class="text">프로필 사진<br></div> 
+                <input type="file" src="" alt="profile_img">
+                
+            <br>
+                <button type="submit" class="signupBtn"><b>가입하기</b></button>
+            </form>
+        </div>
     </div>
 </body>
 
