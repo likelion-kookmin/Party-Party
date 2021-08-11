@@ -32,7 +32,7 @@
             {% for endneed in endneeds %}
             <article>
                 <img src = "{{endneed.product_image.url}}" class = "product_image">
-                <a href = "{% url 'goodsdetail' endneed.id %}">{{endneed.product}}</a>
+                <a href = "{% url 'Semigoodsdetail' endneed.id %}">{{endneed.product}}</a>
                 
             </article>
             {% endfor %}

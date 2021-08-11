@@ -21,22 +21,130 @@
             else
                 document.search.submit();
         }
+
+
+        function check() {
+                // Get the checkbox
+                var checkBox = document.getElementById("myCheck");
+                // Get the output text
+                var text = document.getElementById("text");
+
+                // If the checkbox is checked, display the output text
+                if (checkBox.checked == true) {
+                    text.style.display = "block";
+                } else {
+                    text.style.display = "none";
+                }
+        }
+
     </script>
 </head>
 
 <body>
+    <main>
 
-    <h2>입금폼 작성하기</h2>
-    <div>
-        <form method="POST" action="{% url 'create' %}" enctype="multipart/form-data">
-            {% csrf_token %}
-            <input type="text" name="title">
-            <input type="text" name="content">
-            <input type="file" name="imgs" multiple>
-            <input type="submit" value="작성하기">
-        </form>
+        <h2>입금폼 작성하기</h2>
+        <div>
+            <form action="{%url 'create'%}" method="POST" enctype="multipart/form-data" onsubmit="return chk();">
+                {% csrf_token %}
+                <div>
+                    <label for="product">입금폼 명</label><br>
+                    <input type="text" name="product" id="product" required>
+                </div>
+                <div class="line"></div>
+                도안 <input id="inputbox" type="file" name="product_image" required>
+                <div>
+                    <label for="price">가격</label><br>
+                    <input type="shortbox" type="number" name="price" id="price" required> 원
+                </div>
 
-    </div>
+                <div>
+                    <label for="count">수량</label><br>
+                    <input type="shortbox" type="number" name="count" id="count" required> 개
+                </div>
+                <div>
+                    <label for="tag">분류</label><br>
+                    <select name="tag" id="tag">
+                        <option value="2D">2D</option>
+                        <option value="애니메이션">애니메이션</option>
+                        <option value="실존인물">실존인물</option>
+                        <option value="그 외">그 외</option>
+
+                    </select>
+                </div>
+                <div>
+                    <label for="email">이메일</label><br>
+                    <input type="email" name="email" id="email" required>
+                </div>
+
+                <div>
+                    <label for="twitter">트위터 아이디</label><br>
+                    @<input type="text" name="twitter" id="twitter" required>
+                </div>
+
+
+                <div>
+                    <label for="information_needs">설명</label><br>
+                    <textarea name="information_needs" id="information_needs" cols="30" rows="10"></textarea>
+                </div>
+                <hr>
+                <div>
+                    입금기간 <br>
+                    <label for="start_date">시작일</label><br>
+                    <input type="date" name="start_date" id="start_date" cols="30" rows="10">
+                
+                    <label for="end_date">마감일</label><br>
+                    <input type="date" name="end_date" id="end_date" cols="30" rows="10">
+                </div>
+
+                <div>
+                    입금방법 <br>
+                    <label for="bank_deposit"></label>
+                    <select name="bank_deposit" id="bank_deposit">
+                        <option value="신한">신한은행</option>
+                        <option value="농협">농협</option>
+                        <option value="하나">하나은행</option>
+                        <option value="국민">국민은행</option>
+                        <option value="기업">기업은행</option>
+                        <option value="대구">대구은행</option>
+                        <option value="부산">부산은행</option>
+                        <option value="우체국">우체국</option>
+                        <option value="SC제일">SC제일은행</option>
+                        <option value="광주">광주은행</option>
+                        <option value="경남">경남은행</option>
+                        <option value="수협">수협</option>
+                        <option value="케이뱅크">케이뱅크</option>
+                        <option value="카카오뱅크">카카오뱅크</option>
+                    </select>
+                    <label for="account_deposit">입금계좌: </label>
+                    <input type="number" name="account_deposit" id="account_deposit" required>
+                    <label for="account_owner">계좌 주인: </label>
+                    <input type="text" name="account_owner" id="account_owner" required>
+                </div>
+
+                <div>
+                    배송방법 <br>
+                    <label for="howto_delivery"></label>
+                    <select name="howto_delivery" id="howto_delivery">
+                        <option value="준등기">준등기</option>
+                        <option value="우편">우편</option>
+                        <option value="등기">등기</option>
+                        <option value="반값택배">반값택배</option>
+                        <option value="택배">택배</option>
+                        <option value="직거래">직거래</option>
+                        
+                    </select>
+                </div>
+
+                
+                <input type="submit" value="글쓰기">
+                
+                
+            </form>
+
+        </div>
+    </main>
+
 
 </body>
 

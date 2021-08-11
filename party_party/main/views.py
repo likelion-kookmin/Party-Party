@@ -7,9 +7,9 @@ from goods.models import *
 
 User = get_user_model()
 
-def main(request) :
+
+def main(request):
     posts = Goods.objects.all()[:4]
-    endneeds = Goods.objects.filter(term_needs = datetime.date.today())
-    end_dates = Goods.objects.filter(end_date = datetime.date.today())
-    return render(request, 'main.html', {'posts' : posts, 'endneeds' : endneeds, 'enddeposit' : end_dates})
-    
+    # endneeds = Goods.objects.filter(term_needs = datetime.date.today())
+    end_dates = Goods.objects.filter(end_date=datetime.date.today())
+    return render(request, 'main.html', {'posts': posts, 'enddeposit': end_dates})

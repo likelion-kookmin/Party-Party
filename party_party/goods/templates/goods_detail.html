@@ -23,7 +23,7 @@
             
             <section class = "about_goods">
                 <div class = "profile">
-                    <img src = "{{product.image.url}}" class = "product_image">
+                    <img src="{{ product.product_image.url }}" alt="">
                     <div class = "section_info">
                         <div class = "product_name">제품명 : {{product.product}}</div>
                         <div class = "writer">작성자 : {{product.writer}}</div>
@@ -34,7 +34,7 @@
                 
             </section>
             
-            
+            <!---
             <div class = "section_title">
                 <div class = "needs">
                     <a href = "{% url 'needform' %}">수요조사폼</a>
@@ -43,13 +43,13 @@
                     <a href = "{% url 'depoform' %}">입금폼</a>
                 </div>
             </div>
-            <div class = "section_content">
+            <div class = "section_content">-->
                 
             </div>
         
             
 
         </main>
-    <!--</body>-->
+    </body>
 
 {% endblock %}
