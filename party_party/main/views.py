@@ -12,4 +12,3 @@ def main(request) :
     endneeds = Goods.objects.filter(term_needs = datetime.date.today())
     end_dates = Goods.objects.filter(end_date = datetime.date.today())
     return render(request, 'main.html', {'posts' : posts, 'endneeds' : endneeds, 'enddeposit' : end_dates})
-    

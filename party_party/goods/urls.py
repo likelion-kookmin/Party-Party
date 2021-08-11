@@ -7,7 +7,7 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('goodslist/', goodslist, name = "goodslist"),
-    path('goodsdetail/<str:product_id>', Semigoodsdetail, name = "goodsdetail"),
+    path('goodsdetail/<str:product_id>', goodsdetail, name = "goodsdetail"),
     path('write_semigoods/', write_semigoods, name = "write_semigoods"),
     path('create_semi/', create_semi,name='create_semi'),
     path('write_goods/', write_goods, name = "write_goods"),
@@ -20,6 +20,6 @@ urlpatterns = [
     path('mypartiform/',mypartiform,name='mypartiform'),
     path('mytag/',mytag,name='mytag'),
     path('mywriting/',mywriting,name='mywriting'),
-    path('needform/', needform, name = "needform"),
-    path('depoform/', depoform, name = 'depoform'),
+    path('needform/<str:product_id>', needform, name = "needform"),
+    path('depoform/<str:product_id>', depoform, name = 'depoform'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

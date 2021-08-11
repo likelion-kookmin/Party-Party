@@ -37,10 +37,10 @@
             
             <div class = "section_title">
                 <div class = "needs">
-                    <a href = "{% url 'needform' %}">수요조사폼</a>
+                    <a href = "{% url 'needform' product.id %}">수요조사폼</a>
                 </div>
                 <div class = "deposit">
-                    <a href = "{% url 'depoform' %}">입금폼</a>
+                    <a href = "{% url 'depoform' product.id %}">입금폼</a>
                 </div>
             </div>
             <div class = "section_content">
