@@ -65,7 +65,7 @@
 
 
         <div class="sidenav">
-            <div class="menu_name">My page</div><br>
+            <div class="menu_name"><a href="{% url 'mypage' %}">My page</a></div><br>
             <a href="{% url 'myinfo' %}" class="font">나의정보</a>
             <a href="{% url 'mypartiform' %}" class="font">내가 참여한 폼</a>
             <button class="dropdown-btn">내가 쓴 글
@@ -104,7 +104,7 @@
             </div>
         </footer>
 
-        </div>
+    </div>
 </body>
 
 </html>
