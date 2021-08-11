@@ -57,7 +57,7 @@ class SemiGoods(models.Model):
     information_needs = models.CharField(max_length=500)
     
     def __str__(self):
-        regturn self.product
+        return self.product
 
 
 
