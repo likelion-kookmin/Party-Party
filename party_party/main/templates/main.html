@@ -17,7 +17,7 @@
 
             {% for enddepos in enddeposits %}
             <article>
-                <img src="{{enddepos.product_image.url}}" class="image">
+                <img src="{{enddepos.product_image.url}}" class="product_image">
                 <a href="{% url 'goodsdetail' enddepos.id %}">{{enddepos.product}}</a>
                 {{enddepos.price}}
                 {{enddepos.writer}}
@@ -32,7 +32,7 @@
         <div class="section_content">
             {% for endneed in endneeds %}
             <article>
-                <img src="{{endneed.product_image.url}}" class="image">
+                <img src="{{endneed.product_image.url}}" class="product_image">
                 <a href="{% url 'goodsdetail' endneed.id %}">{{endneed.product}}</a>
 
             </article>
