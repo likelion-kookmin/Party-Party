@@ -31,8 +31,8 @@ body {
   align-items: center;
 
   min-height: 100vh;
-
-  margin-top: 20px;
+  top:60px;
+  margin-top: 60px;
 }
 
 header {
@@ -190,7 +190,7 @@ footer .contact {
 .sidenav {
   height: auto;
   width: 200px;
-  position:relative;
+  position:static;
   z-index: 1;
   top: 60px;
   left: 0;
