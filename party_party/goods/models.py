@@ -18,8 +18,8 @@ ITEM_CHOICES= {
 class Goods(models.Model) :
     
     product = models.CharField(max_length = 20)
-    product_image = models.ImageField(upload_to="goods/")
-    writer = models.ForeignKey(User, on_delete = CASCADE, related_name = "regist")
+    product_image = models.ImageField(upload_to="images/")
+    #writer = models.ForeignKey(User, on_delete = CASCADE, related_name = "regist")
     price = models.IntegerField()
     count = models.IntegerField()
     item = models.CharField(max_length=80, choices=ITEM_CHOICES)  #상품 분류
@@ -45,12 +45,12 @@ class Goods(models.Model) :
 class SemiGoods(models.Model):
 
     product = models.CharField(max_length = 30)
-    product_image = models.ImageField(upload_to="semigoods/")
+    product_image = models.ImageField(upload_to="images/")
     
     writer = models.ForeignKey(User, on_delete = CASCADE, related_name = "semiregist")
-    semi_price = models.IntegerField()
-    semi_count = models.IntegerField()
-    tag = models.CharField(max_length=80,null = True)
+    semi_price = models.IntegerField(default=0)
+    semi_count = models.IntegerField(default=0)
+    tag = models.CharField(max_length=80)
 
     email=models.EmailField(null=True,max_length = 200)
     twitter=models.CharField(max_length=20)
@@ -59,6 +59,9 @@ class SemiGoods(models.Model):
     def __str__(self):
         return self.product
 
+class SemiPhoto(models.Model):
+    post = models.ForeignKey(SemiGoods, on_delete=models.CASCADE, null=True)
+    image = models.ImageField(upload_to='images/', blank=True, null=True)
 
 
 

@@ -10,17 +10,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="./static/write_semigoods.css">
     <title>write-choices</title>
+
+
+    <script>
+        function chk() {
+            if (document.getElementById("title").value == "" || document.getElementById("body").value == "") {
+                alert("내용을 입력해주세요");
+                return false;
+            }
+            else
+                document.search.submit();
+        }
+    </script>
 </head>
 
 <body>
+<main>
 
     <h2>수요조사폼 작성하기</h2>
     <div>
-        수요조사폼 작성하기
+    <form action="{%url 'create_semi'%}" method="POST" enctype="multipart/form-data" onsubmit="return chk();">
+        {% csrf_token %}
+        <div>
+            <label for="product">수요조사폼 명</label><br>
+            <input type="text" name="product" id="product" required>
+        </div>
+        <div class="line"></div>
+        도안 <input id="inputbox" type="file" name="product_image" multiple required>
+        <div>
+            <label for="semi_price">예상 가격</label><br>
+            <input type="shortbox" type="number" name="semi_price" id="semi_price" required> 원 </div>
+        
+        <div>
+            <label for="semi_count">예상 수량</label><br>
+            <input type="shortbox" type="number" name="semi_count" id="semi_count" required> 개 </div>
+        <div>
+            <label for="tag">분류</label><br>
+            <select name="tag" id="tag">
+                <option value="2D">2D</option>
+                <option value="애니메이션">애니메이션</option>
+                <option value="실존인물">실존인물</option>
+                <option value="그 외">그 외</option>
+               
+            </select>
+        </div>
+        <div>
+            <label for="email">이메일</label><br>
+            <input type="email" name="email" id="email" required>
+        </div>
 
-        <br>입금폼 작성하기
+        <div>
+            <label for="twitter">트위터 아이디</label><br>
+            @<input type="text" name="twitter" id="twitter" required>
+        </div>
 
+        
+        <div>
+            <label for="information_needs">설명</label><br>
+            <textarea name="information_needs" id="information_needs" cols="30" rows="10"></textarea>
+        </div>
+        <input type="submit" value="글쓰기">
+    </form>
+    
     </div>
+</main>
+    
 
 </body>
 
