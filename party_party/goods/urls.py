@@ -20,4 +20,6 @@ urlpatterns = [
     path('mypartiform/',mypartiform,name='mypartiform'),
     path('mytag/',mytag,name='mytag'),
     path('mywriting/',mywriting,name='mywriting'),
+    path('needform/', needform, name = "needform"),
+    path('depoform/', depoform, name = 'depoform'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

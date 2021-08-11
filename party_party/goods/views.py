@@ -17,6 +17,12 @@ def goodsdetail(request, product_id) :
     product = Goods.objects.get(id = product_id)
     return render(request, 'goods_detail.html', {'product' : product})
 
+def needform(request) :
+    return render(request, 'form_needs.html')
+
+def depoform(request) :
+    return render(request, 'form_deposit.html')
+
 
 def write_choices(request):
     return render(request, 'write_choices.html')
@@ -101,6 +107,7 @@ def create(request):  # 데이터 값을 넘기는 함수
 
 def success(request):
     return HttpResponse('successfully uploaded')
+
 
 
 def mypage(request):

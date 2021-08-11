@@ -1,12 +1,13 @@
 main{
-    background-color: orange;
+    background-color: white;
     width : 75vw;
     height : 100vh;
     margin : 0 auto;
+    text-align: left;
 }
 
 main .about_goods {
-    background-color: rgb(255, 255, 230);
+    background-color: white;
 }
 
 main section .profile img{
@@ -16,25 +17,25 @@ main section .profile img{
 
 main section .section_info{
     display : inline-block;
-    background-color: blueviolet;
+    background-color: white;
 }
 
 main section .section_title {
-    border-top: 2px solid black;
+    /*border-top: 2px solid black;
     border-right: 2px solid black;
-    border-left: 2px solid black;
+    border-left: 2px solid black;*/
     display : inline-block;
 }
 
 main .section_title{
     display : grid;
     height : 50px;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-areas: "needs deposit notice";
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "needs deposit";
     text-align: center;
-    border-top : 2px solid black;
+    /*border-top : 2px solid black;
     border-right : 2px solid black;
-    border-left : 2px solid black;
+    border-left : 2px solid black;*/
 }
 
 main .section_title div{
@@ -43,7 +44,7 @@ main .section_title div{
 
 main .section_title .needs{
     grid-area: needs;
-    background-color: aqua;
+    background-color: white;
 }
 
 main .section_title .deposit{
@@ -51,11 +52,7 @@ main .section_title .deposit{
     background-color: white;
 }
 
-main .section_title .notice {
-    grid-area: notice;
-    background-color: aqua;
-}
 
 main section .section_content{
-    background-color: rgb(212, 255, 255);
+    background-color: white;
 }
