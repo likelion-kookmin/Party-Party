@@ -25,7 +25,7 @@ class Goods(models.Model) :
     item = models.CharField(max_length=80, choices=ITEM_CHOICES)  #상품 분류
     end_date=models.DateField(db_column='End Date') #마감일
     term_needs = models.DateField()
-    term_deposit = models.IntegerField()
+    term_deposit = models.DateField()
     information_needs = models.CharField(max_length=500)
     information_deposit = models.CharField(max_length=500)
     account_deposit = models.CharField(max_length= 50)
