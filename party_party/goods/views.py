@@ -8,8 +8,13 @@ def goodslist(request) :
     product = Goods.objects.all()
     return render(request, 'goods_list.html')
 
-def goodsdetail(request, product_id) :
+def Semigoodsdetail(request, product_id) :
     product = SemiGoods.objects.get(id = product_id)
+    return render(request, 'goods_detail.html', {'product' : product})
+
+
+def goodsdetail(request, product_id) :
+    product = Goods.objects.get(id = product_id)
     return render(request, 'goods_detail.html', {'product' : product})
 
 
@@ -60,7 +65,7 @@ def create_semi(request): # 데이터 값을 넘기는 함수
         
         new_semigoods.save()    
         
-    return redirect('goodsdetail', new_semigoods.id)
+    return redirect('Semigoodsdetail', new_semigoods.id)
 
 def write_goods(request): #입금폼 작성
     goods = Goods.object.all()
