@@ -17,10 +17,10 @@ def goodsdetail(request, product_id) :
     product = Goods.objects.get(id = product_id)
     return render(request, 'goods_detail.html', {'product' : product})
 
-def needform(request) :
+def needform(request, product_id) :
     return render(request, 'form_needs.html')
 
-def depoform(request) :
+def depoform(request, product_id) :
     return render(request, 'form_deposit.html')
 
 
