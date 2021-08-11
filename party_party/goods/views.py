@@ -17,6 +17,12 @@ def goodsdetail(request, product_id) :
     product = Goods.objects.get(id = product_id)
     return render(request, 'goods_detail.html', {'product' : product})
 
+def needform(request) :
+    return render(request, 'form_needs.html')
+
+def depoform(request) :
+    return render(request, 'form_deposit.html')
+
 
 def write_choices(request):
     return render(request, 'write_choices.html')
@@ -71,8 +77,8 @@ def write_goods(request): #입금폼 작성
     goods = Goods.object.all()
     return render(request, 'write_goods.html')
 
-def success(request):
-    return HttpResponse('successfully uploaded')
+#def success(request):
+#    return HttpResponse('successfully uploaded')
 
 
 def mypage(request):
